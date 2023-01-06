@@ -11,11 +11,51 @@ npx create-expo-app --template
 
 select blank template and name the app my-app
 
-## running the app
+## running the app on a physical iOS device
 
-Install xcode to run the IOS emulator.
+Install the expo client from the App Store on your iOS device  
+Run the following command in your terminal.
+Connect your physical device to the same internet connection your dev machine is running on.
 
 ```bash
 npm run start
-select the IOS option
+```
+
+Scan the QR Code presented in the terminal and expo will run your app on your device
+To pull up the developer menu shake your device
+
+## running the app on an iOS device emulator
+
+Install xcode to run the iOS emulator.  
+Run xcode and select your iOS device.  
+Run the following command in your terminal.
+
+```bash
+npm run start
+```
+
+Select the iOS option. This will launch your app in your running iOS device.  
+To pull up the developer menu type CMD+d
+
+## running the app on an Andriod device emulator
+
+Install Andriod Studio from <https://developer.android.com/studio>  
+Follow the steps here <https://docs.expo.dev/workflow/android-studio-emulator/>
+Open Andriod Studio and run your Andriod device
+
+Run the following command in your terminal.
+
+```bash
+npm run start
+```
+
+Select the Andriod option. This will launch your app in your running Andriod device.
+To pull up the developer menu type CMD+m
+
+## publishing the app to expo
+
+Run the following command in your terminal.
+
+```bash
+npm run publish
 ```
