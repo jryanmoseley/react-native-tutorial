@@ -1,13 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  Image,
-  SafeAreaView,
-  Button,
-  Alert,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import {
   useDimensions,
@@ -16,41 +7,30 @@ import {
 
 export default function App() {
   console.log("Hello from my app");
-
   console.log(useDimensions());
   console.log(useDeviceOrientation());
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Button
-        title="Click Me"
-        onPress={() =>
-          Alert.alert("My title", "My message", [
-            { text: "Yes", onPress: () => console.log("Yes") },
-            { text: "No", onPress: () => console.log("No") },
-          ])
-        }
+    <View style={styles.container}>
+      <View
+        style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}
       />
-      <Text>Hello - react native is cool</Text>
-      <TouchableHighlight onPress={() => console.log("image tapped")}>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        ></Image>
-      </TouchableHighlight>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+      <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "red", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "grey", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "green", width: 100, height: 100 }} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "row", // horizontal
+    flexWrap: "wrap", // wrap
     backgroundColor: "darkgrey",
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center", // main axis
+    alignItems: "center", // secondary axis.  detemines alignment of content within each line
+    alignContent: "center",
   },
 });
