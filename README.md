@@ -54,8 +54,21 @@ To pull up the developer menu type CMD+m
 
 ## publishing the app to expo
 
-Run the following command in your terminal.
+I followed this guide to set up my environment to publish to expo <https://docs.expo.dev/eas-update/getting-started/>
+
+Run the following to setup publishing with eas
 
 ```bash
-npm run publish
+## install and configure expo updates
+npx expo install expo-updates
+eas update:configure
+## type in your expo username and password
+
+eas build:configure
+
+## publish preview to dev
+npm run publish-dev
+
+## publish a preview to expo
+npm run publish-preview
 ```

@@ -5,7 +5,7 @@ export default function App() {
   console.log("Hello from my app");
   return (
     <View style={styles.container}>
-      <Text>Hello - this is blowing my mind a lot</Text>
+      <Text>Hello - react native is cool</Text>
       <StatusBar style="auto" />
     </View>
   );
